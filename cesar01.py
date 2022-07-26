@@ -15,4 +15,16 @@ def encrypt (b_text, a_shift):  # definido uma função e um parametro
         texto_cod += nova_letra  # variavel texto_cod recebe a nova letra somando a string.
     print(texto_cod)
 
+def decrypt (b_text, a_shift):
+    text_decod = ""
+    for letra in b_text:
+        nova_lista = list(reversed(alphabet))
+        posisao = nova_lista.index(letra)
+        nova_posicao = posisao + a_shift
+        nova_letra = nova_lista[nova_posicao]
+        text_decod += nova_letra
+    print(text_decod)
+
+decrypt(b_text=text, a_shift=shift)
+
 encrypt(b_text=text, a_shift=shift)   #CHAMAR A FUNÇÃO SEMPRE USANDO O PARAMETRO E O ARGUMENTO.
